@@ -1,14 +1,19 @@
-# flores_mobprog
-Lawrenz Dave Zubiri Flores
-Bachelor of Science Information Technology -Mobile Web Application
-INF233
+# Lawrenz Dave Z. Flores, MIT
 
-So basically, how Models, Services, and Screens all work together in this app is a pretty straightforward cycle:
+## INF233
 
-Screens handle the user side of things: When someone taps around the app—like logging in on the SigninScreen, checking out posts on the NewsFeedScreen, or dropping a comment on the DetailScreen—the screen itself doesn't actually go out and make network requests. Instead, it just asks the Service layer to do the heavy lifting by calling methods like UserService.login(), PostService.getPosts(), or CommentService.addComment().
+## CTADMOBL Advance Mobile Programming
 
-Services take care of the backend and mapping: The Service handles hitting the DummyJSON API (or handling SharedPreferences locally). Once raw JSON comes back, the Service uses the Model's fromJson() factory constructor to turn that raw map into clean, strongly typed Dart objects like User, Post, or Comment.
+A Flutter project focused on building a social media-style application using API integration and the Provider package.
 
-Models pass structured data back to the UI: The Model makes sure everything—IDs, text, author names, likes—is fully type-safe and won't throw null errors on us. The Service then passes these Model objects straight back to the Screen, where standard Flutter widgets like FutureBuilder, ListView.builder, and setState() instantly render everything for the user.
+## Long Exam 1
 
-To wrap it up, Screens deal with user input and what's on screen, Services manage the logic and talking to the backend, and Models act as our data blueprint to safely pass and format everything cleanly between the services and the screens.
+This exam focuses on replicating and improving a Facebook-style Flutter application using the DummyJSON API. I implemented user authentication and saved the user's information using `shared_preferences`, along with a splash screen that checks the user's login status. The application also displays posts based on the logged-in user's ID, includes a settings screen with a sign-out option, and allows users to view and interact with comments and like buttons.
+
+## Long Exam 1: Discussion
+
+This activity helped me understand how Flutter screens, models, services, and APIs work together. The `User` and `Post` models organize the data, while the services handle communication with the DummyJSON API.
+
+The application uses the saved user information to keep the user logged in and display their posts on the profile screen. Comments are loaded for each post, while the like button and comment features allow users to interact with the posts.
+
+Overall, the exam improved my understanding of API integration, authentication, persistent storage, and organizing a Flutter application into separate files and responsibilities.
